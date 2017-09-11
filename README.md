@@ -1,6 +1,6 @@
 # docker-fastrweb
 
-Dockerfile is linked to an automated build at https://hub.docker.com/r/johanneselias/fastrweb
+(The Dockerfile in this repository is linked to an automated build at https://hub.docker.com/r/johanneselias/fastrweb)
 
 ## Prerequisites
 
