@@ -2,7 +2,7 @@ version: '2'
 
 services:
    fastrweb:
-     image: fastrweb:01
+     image: johanneselias/fastrweb
      container_name: fastr
      volumes: 
        - ./R:/var/FastRWeb/web.R
