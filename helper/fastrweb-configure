@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euox pipefail
+
+# apache config
+a2dissite 000-default
+a2ensite fastrweb-cgi
+a2enmod cgi
+
+# start fastrweb
+/var/FastRWeb/code/start
+
+# start or restart services: cron, apache2
+apache2ctl -DFOREGROUND
+
+exec "$@"
+
