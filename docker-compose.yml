@@ -2,11 +2,12 @@ version: '2'
 
 services:
    fastrweb:
-     image: johanneselias/fastrweb
+     image: johanneselias/fastrweb:1.2
      container_name: fastr
      volumes: 
        - ./R:/var/FastRWeb/web.R
-       - ./php:/var/www/html
+       - ./php:/var/www/html/fastrweb
+       - ./apache_siteconf:/etc/apache2/sites-available/
      ports:
        - "80:80"
      restart: always

@@ -18,12 +18,12 @@ WORKDIR /var/www
 RUN cp /usr/local/lib/R/site-library/FastRWeb/cgi-bin/Rcgi /usr/lib/cgi-bin/R
 
 COPY helper/fastrweb-configure /usr/bin/
-COPY helper/fastrweb-cgi.conf /etc/apache2/sites-available/
 
 RUN chmod 700 /usr/bin/fastrweb-configure; \
    chmod -R 755 /usr/lib/cgi-bin
 
 ENTRYPOINT ["fastrweb-configure"]
+
    
 
 
