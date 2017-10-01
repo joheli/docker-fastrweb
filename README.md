@@ -16,7 +16,7 @@ First, clone the contents onto your computer by typing
     
 Then cd into directory 'docker-fastrweb' and type
 
-    docker run -d -p 80:80 -v $PWD/R:/var/FastRWeb/web.R -v $PWD/php:/var/www/html --name fast johanneselias/fastrweb
+    docker run -d -p 80:80 -v $PWD/R:/var/FastRWeb/web.R -v $PWD/php:/var/www/html -v $PWD/apache_siteconf:/etc/apache2/sites-available --name fast johanneselias/fastrweb
 
 Alternatively, use docker-compose and type
 
