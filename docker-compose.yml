@@ -7,7 +7,7 @@ services:
      volumes: 
        - ./R:/var/FastRWeb/web.R
        - ./php:/var/www/html/fastrweb
-       - ./apache_siteconf:/etc/apache2/sites-available/
+       - ./apache_siteconf:/etc/apache2/sites-available
      ports:
        - "80:80"
      restart: always
