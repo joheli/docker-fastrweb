@@ -7,7 +7,7 @@ RUN apt-get -y update && apt-get install -y --allow-unauthenticated \
    r-base \
    r-base-dev 
 
-RUN Rscript -e "install.packages(c('FastRWeb', 'Rserve'), repos = 'http://ftp.gwdg.de/pub/misc/cran')" 
+RUN Rscript -e "install.packages(c('FastRWeb', 'Rserve', 'XML', 'Cairo', 'Matrix', 'log4r', 'dplyr', 'ggplot2', 'openxlsx')), repos = 'http://ftp.gwdg.de/pub/misc/cran')" 
 
 WORKDIR /usr/local/lib/R/site-library/FastRWeb
 RUN ./install.sh \
