@@ -1,4 +1,4 @@
-FROM johanneselias/ubuntu1704-apache2-php-perl:1.0
+FROM johanneselias/ubuntu1704-apache2-php-perl:1.1
 
 RUN echo 'deb http://ftp.gwdg.de/pub/misc/cran/bin/linux/ubuntu zesty/' >> /etc/apt/sources.list
 
