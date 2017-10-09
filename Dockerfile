@@ -17,10 +17,10 @@ RUN ./install.sh \
 WORKDIR /setup
 
 # install copyfiles.py
-RUN wget https://github.com/joheli/copyfiles/archive/v0.4.tar.gz; \
-   tar -xzf v0.4.tar.gz; \
-   chmod 755 /setup/copyfiles-0.4/copyfiles.py; \
-   ln -s /setup/copyfiles-0.4/copyfiles.py /usr/bin/
+RUN wget https://github.com/joheli/copyfiles/archive/v0.6.tar.gz; \
+   tar -xzf v0.6.tar.gz; \
+   chmod 755 /setup/copyfiles-0.6/copyfiles.py; \
+   ln -s /setup/copyfiles-0.6/copyfiles.py /usr/bin/
    
 WORKDIR /var/www
 
