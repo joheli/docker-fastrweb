@@ -1,3 +1,8 @@
+# This files contains instructions for copyfiles.py (https://github.com/joheli/copyfiles)
+#
+# instructions consist of a file or folder in the folder 'import', which is copied to
+# the appropriate location in the container.
+
 # site 1 on port 8080
 site1/apache_siteconf/site1.conf	/etc/apache2/sites-available
 site1/php	/var/www/site1
