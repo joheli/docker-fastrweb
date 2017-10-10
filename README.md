@@ -16,16 +16,12 @@ First, clone the contents onto your computer by typing
     
 Then cd into directory 'docker-fastrweb' and type
 
-    docker run -d -p 80:80 -v $PWD/R:/var/FastRWeb/web.R -v $PWD/php:/var/www/html -v $PWD/apache_siteconf:/etc/apache2/sites-available --name fast johanneselias/fastrweb
-
-Alternatively, use docker-compose and type
-
     docker-compose up -d
     
 ## Check it out
 
-If all went according to plan, you should be able to see the result in your browser. Open the IP address of your container (e.g. http://localhost)
+If all went according to plan, you should be able to see the result in your browser. Open the IP address of your container (e.g. http://localhost). There are two sites: one on port 8080 (site 1) and another on port 80.
 
 ## I want to use my own R- and php-files
 
-Please put those into the directory 'R' and 'php', respectively. Then spin up the container again.
+Please put those into the directory 'import'. The file ```copy.tab``` manages the copying of files by the script ```copyfiles.py``` (available on [github](https://github.com/joheli/copyfiles)). Try it out!
