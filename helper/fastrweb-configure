@@ -1,8 +1,13 @@
 #!/bin/bash
-set -euox pipefail
+
+# copy stuff from /setup/sites with copyfiles.py using instructions in /setup/sites/copy.tab
+copyfiles.py -v /setup/sites/copy.tab
+
+# set rights for /var/www
+chown www-data:www-data -R /var/www
 
 # apache config: disable default site configs
-a2dissite 000-default # <- this line is necessary, if 000-default.conf is not present in /etc/apache2/sites-available/
+# a2dissite 000-default # <- this line is necessary, if 000-default.conf is not present in /etc/apache2/sites-available/
 # other defaults
 for i in $(ls /etc/apache2/sites-available/*default*); do
    default_confx=$(basename $i)
@@ -21,7 +26,6 @@ a2enmod cgi
 # start fastrweb
 /var/FastRWeb/code/start
 
-# start or restart services: cron, apache2
+# start apache2
 apache2ctl -DFOREGROUND
 
-exec "$@"

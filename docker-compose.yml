@@ -5,11 +5,9 @@ services:
      image: johanneselias/fastrweb:1.4
      container_name: fastr
      volumes: 
-       - ./R:/var/FastRWeb/web.R
-       - ./php:/var/www/html/fastrweb
-       - ./data:/data
-       - ./apache_siteconf:/etc/apache2/sites-available
+       - ./import:/setup/sites
      ports:
        - "80:80"
+       - "8080:8080"
      restart: always
 

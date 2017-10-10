@@ -1,0 +1,8 @@
+# site 1 on port 8080
+site1/apache_siteconf/site1.conf	/etc/apache2/sites-available
+site1/php	/var/www/site1
+
+# site 2 on port 80
+site2/apache_siteconf/site2.conf	/etc/apache2/sites-available
+site2/R/testit.R	/var/FastRWeb/web.R
+site2/php	/var/www/site2
